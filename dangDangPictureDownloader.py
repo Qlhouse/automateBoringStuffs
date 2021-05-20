@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
+import re
 import random
 
 # headers
@@ -30,6 +31,10 @@ def parseImgUrl(productURL):
     pageHtml = requests.get(productURL, headers=headers).text
     soup = BeautifulSoup(pageHtml, 'lxml')
 
+    # Locate ISBN
+    isbnTagString = soup.find("ul", class_="key clearfix").find_all("li")[4].string
+    ISBN = re.sub("\D", "", isbnTagString)
+
     imgSlide = soup.find('ul', id = 'main-img-slider')
 
     aTags = imgSlide.select('a[data-imghref]')
@@ -37,7 +42,8 @@ def parseImgUrl(productURL):
         imgLink = tag['data-imghref']
         imgUrlSet.add(imgLink)
 
-    return imgUrlSet
+    return imgUrlSet, ISBN
+
 
 # Download and save pictures
 def download_picture(imgUrlSet, isbn):
@@ -57,10 +63,8 @@ def download_picture(imgUrlSet, isbn):
         with open(savePath, 'wb') as fw:
             fw.write(pic.content)
 
- # URL refer to the book
-productURL = 'http://product.dangdang.com/29216523.html'
-isbn = '9787544262705'
 if __name__ == '__main__':
-    download_picture(parseImgUrl(productURL), isbn)
+    bookUrl = input("Please book link: ")
+    download_picture(*parseImgUrl(bookUrl))
 
 
