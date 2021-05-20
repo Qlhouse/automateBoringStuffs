@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from pathlib import Path
 import random
 
 # headers
@@ -21,23 +22,45 @@ my_headers = [
 
 headers = {'User-Agent': random.choice(my_headers)}
 
-# URL refer to the book
-mainPage = 'http://product.dangdang.com/29216523.html'
 
-# parse URL address for object picture
+# parse URL address for pictures
+def parseImgUrl(productURL):
+    imgUrlSet = set()
+
+    pageHtml = requests.get(productURL, headers=headers).text
+    soup = BeautifulSoup(pageHtml, 'lxml')
+
+    imgSlide = soup.find('ul', id = 'main-img-slider')
+
+    aTags = imgSlide.select('a[data-imghref]')
+    for tag in aTags:
+        imgLink = tag['data-imghref']
+        imgUrlSet.add(imgLink)
+
+    return imgUrlSet
 
 # Download and save pictures
-def download_picture(html):
-    # Download picture
-    try:
-        pic = requests.get(html, timeout=10)
-    except requests.exceptions.ConnectionError:
-        print('图片无法下载')
+def download_picture(imgUrlSet, isbn):
+    i = 1
+    for link in imgUrlSet:
+        # Download picture
+        try:
+            pic = requests.get(link, timeout=10)
+        except requests.exceptions.ConnectionError:
+            print('图片无法下载')
 
-    # Save picture
-    savePath = "保存路径" + '.jpg'
-    with open(savePath, 'wb') as fw:
-        fw.write(pic.content)
+        # Save picture
+        fileName = f'{isbn}_{i}.jpg'
+        savePath = Path("C:\\Users\john\Documents") / fileName
+        print(savePath)
+        i += 1
+        with open(savePath, 'wb') as fw:
+            fw.write(pic.content)
 
- 
+ # URL refer to the book
+productURL = 'http://product.dangdang.com/29216523.html'
+isbn = '9787544262705'
+if __name__ == '__main__':
+    download_picture(parseImgUrl(productURL), isbn)
+
 
