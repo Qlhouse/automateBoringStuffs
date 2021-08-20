@@ -1,6 +1,10 @@
 from PIL import Image
 import os
+import json
 from pathlib import Path
+import requests
+from requests.api import head
+from requests.sessions import session
 
 def cropImage(imageAddress):
     print(imageAddress)
@@ -31,4 +35,28 @@ def cropFileInTurn(directory):
             file = dir / file
             cropImage(file)
 
-cropFileInTurn(r'C:\Users\xq127\Pictures\temp')
+# Upload image file to sm.ms(https://sm.ms/)
+'''
+def uploadImage(path):
+    headers = {'Authorization': '5NUSX0M5dr3ewDHK5x8cqpfCCMHfB6e4'}
+    files = {'smfile': open(path, 'rb')}
+    url = 'https://sm.ms/api/v2/upload'
+    res = requests.post(url, files=files, headers=headers).json()
+    print(json.dumps(res, indent=4))
+'''
+
+def uploadImage(path):
+    # session 
+    api_addr = 'https://sm.ms/api/v2'
+    upload_api = '/upload'
+    url = api_addr + upload_api
+    # headers = {'Authorization': '5NUSX0M5dr3ewDHK5x8cqpfCCMHfB6e4'}
+    files = {'smfile': open(path, 'rb')}
+    res = requests.post(url, files=files)
+    print(res)
+    resp = res.json()
+    print(json.dumps(res, indent=4))
+
+path = Path(r'C:\Users\xq127\Pictures\temp\CE9C20A44CDBFD9FEF2C3B71F478A1BB.jpg')
+uploadImage(path)
+# cropFileInTurn(r'C:\Users\xq127\Pictures\temp')
