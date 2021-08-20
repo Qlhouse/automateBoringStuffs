@@ -1,12 +1,12 @@
 from PIL import Image
+import os
+from pathlib import Path
 
 def cropImage(imageAddress):
+    print(imageAddress)
     # Open a image in RGB mode
-    im = Image.open(r'imageAddress')
-
-    # Size of the original image in pixels
-    # This is not mandatory
-    # width, height = im.size
+    # In Windows, address should be raw text
+    im = Image.open(imageAddress)
 
     # Setting the points for cropped image
     left = 0
@@ -19,6 +19,16 @@ def cropImage(imageAddress):
     im1 = im.crop((left, top, right, bottom))
 
     # Show the image in image viewer
-    imageOutputAddress = 'outputAddress'
-    im1.save(r'imageOutputAddress', quality=95)
+    # imageOutputAddress = 'outputAddress'
+    im1.save(imageAddress, quality=95)
 
+# Traverse image files, crop file in turn
+def cropFileInTurn(directory):
+    # In windows, directory should be in raw text, r'C:\Users\xq127\Pictures\temp'
+    for dirpath, dirnames, filenames in os.walk(directory):
+        dir = Path(dirpath)
+        for file in filenames:
+            file = dir / file
+            cropImage(file)
+
+cropFileInTurn(r'C:\Users\xq127\Pictures\temp')
