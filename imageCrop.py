@@ -94,7 +94,7 @@ def uploadImages(directory):
 directory = r'C:\Users\xq127\Pictures\temp'
 coordinate = (0, 500, 1070, 2050)
 
-# cropImagesInDirectory(directory, *coordinate)
+cropImagesInDirectory(directory, *coordinate)
 
 uploadImages(directory)
 # cropFileInTurn(r'C:\Users\xq127\Pictures\temp')
