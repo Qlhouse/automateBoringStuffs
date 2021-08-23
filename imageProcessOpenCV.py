@@ -81,29 +81,24 @@ def cannyEdgeDetection():
 def cropImageWithEdgeDetection():
     # Read the image
     image = cv2.imread(r'C:\Users\xq127\Desktop\bookCrop.jpg')
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     # Edge detection
-    edged = cv2.Canny(image, 10, 100)
-    cv2.imshow("Edged", edged)
-    cv2.waitKey(0)
-
-    # Apply closing function
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (7, 7))
-    closed = cv2.morphologyEx(edged, cv2.MORPH_CLOSE, kernel)
-    cv2.imshow("Closed", closed)
-    cv2.waitKey(0)
+    # edged = cv2.Canny(image, 10, 250)
+    edged = cv2.Canny(gray, 10, 250)
 
     # Find contours
-    (cnts, _) = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, 
+    (cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, 
             cv2.CHAIN_APPROX_SIMPLE)
 
+    # Crop image
+    idx = 0
     for c in cnts:
-        peri = cv2.arcLength(c, True)
-        approx = cv2.approxPolyDP(c, 0.02 * peri, True)
-        cv2.drawContours(image, [approx], -1, (0, 255, 0), 2)
-
-    cv2.imshow("Output", image)
-    cv2.waitKey(0)
+        x, y, w, h = cv2.boundingRect(c)
+        if w > 300 and h > 200:
+            idx += 1
+            newImage = image[y:y+h, x:x+w]
+            cv2.imwrite(str(idx) + '.png', newImage)
 
 
 # sobelEdgeDetection()
