@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 # Install openCV
 '''
@@ -8,6 +9,31 @@ pip install opencv-python
 # Refer to websites
 # [learnopencv.com](https://learnopencv.com/edge-detection-using-opencv/)
 # [quora.com](https://www.quora.com/How-can-I-detect-an-object-from-static-image-and-crop-it-from-the-image-using-openCV)
+
+#############  Output image information  ##############
+def showImageInformation():
+    image = cv2.imread(r'C:\Users\xq127\Desktop\Screenshot.jpg')
+    print(image.shape)
+
+def detectAngleAndRotateImage():
+    pass
+
+#############  Resize image  ################
+def resizeDownImage():
+    image = cv2.imread(r'C:\Users\xq127\Desktop\bookCrop.jpg')
+
+    height, width, channels = image.shape
+
+    # Scale down the image 0.6 times by specifying a single scale factor
+    scaleDown = 1000 / width
+    # scaleDown = 1000 / height
+    resizeDown = cv2.resize(image, None, fx=scaleDown, fy=scaleDown, interpolation=cv2.INTER_AREA)
+
+    cv2.namedWindow("Scale Down", cv2.WINDOW_AUTOSIZE)
+    cv2.imshow("Scale Down", resizeDown)
+    cv2.waitKey(0)
+
+    return resizeDown
 
 ##### Crop Image #####
 def cropImage():
@@ -80,12 +106,15 @@ def cannyEdgeDetection():
 #############  Crop image after edge detected  ##############
 def cropImageWithEdgeDetection():
     # Read the image
-    image = cv2.imread(r'C:\Users\xq127\Desktop\bookCrop.jpg')
+    # image = cv2.imread(r'C:\Users\xq127\Desktop\bookCrop.jpg')
+    image = resizeDownImage()
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     # Edge detection
-    # edged = cv2.Canny(image, 10, 250)
-    edged = cv2.Canny(gray, 10, 250)
+    edged = cv2.Canny(gray, 2, 250)
+    # cv2.namedWindow("Edged Image", cv2.WINDOW_AUTOSIZE)
+    cv2.imshow("Egded Image", edged)
+    cv2.waitKey(0)
 
     # Find contours
     (cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, 
@@ -104,3 +133,5 @@ def cropImageWithEdgeDetection():
 # sobelEdgeDetection()
 # cannyEdgeDetection()
 cropImageWithEdgeDetection()
+# showImageInformation()
+# resizeDownImage()
