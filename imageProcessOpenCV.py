@@ -1,7 +1,7 @@
-from typing import Coroutine
 import cv2
+import math
 import numpy as np
-from glob import glob
+import sys
 from os.path import basename
 
 # Install openCV
@@ -201,7 +201,7 @@ def processImage(fname):
     if get_size(cropped) < 400: return # Too small
     cv2.imwrite('cropped_' + basename(fname), cropped)
 
-processImage(r'C:\Users\xq127\Desktop\bookContent2.jpg')
+# processImage(r'C:\Users\xq127\Desktop\bookContent2.jpg')
 
 # sobelEdgeDetection()
 # cannyEdgeDetection()
@@ -254,3 +254,51 @@ def contourDetech(image):
 5. Recognize line
 6. Crop image by rectangle shaped by lines
 '''
+
+def lineDetect():
+    # Load image
+    filePath = r'C:\Users\xq127\Desktop\bookContent1.jpg'
+    src = cv2.imread(cv2.samples.findFile(filePath), cv2.IMREAD_GRAYSCALE)
+
+    # Check if image is loaded fine
+    if src is None:
+        print('Error opening image!')
+        return -1
+
+    dst = cv2.Canny(src, 20, 200, None, 3)
+
+    # Copy edges to the images that will display the results in BGR
+    cdst = cv2.cvtColor(dst, cv2.COLOR_GRAY2BGR)
+    cdtsP = np.copy(cdst)
+
+    # Standard Hough Line Transform
+    lines = cv2.HoughLines(dst, 1, np.pi / 180, 150, None, 0, 0)
+
+    if lines is not None:
+        for i in range(0, len(lines)):
+            rho = lines[i][0][0]
+            theta = lines[i][0][1]
+            a = math.cos(theta)
+            b = math.sin(theta)
+            x0 = a * rho
+            y0 = b * rho
+            pt1 = (int(x0 + 1000 * (-b)), int(y0 + 1000 * (a)))
+            pt2 = (int(x0 - 1000 * (-b)), int(y0 - 1000 * (a)))
+
+            cv2.line(cdst, pt1, pt2, (0,0,255), 3, cv2.LINE_AA)
+
+    linesP = cv2.HoughLinesP(dst, 1, np.pi / 180, 50, None, 50, 10)
+
+    if linesP is not None:
+        for i in range(0, len(linesP)):
+            l = linesP[i][0]
+            cv2.line(cdtsP, (l[0], l[1]), (l[2], l[3]), 3, cv2.LINE_AA)
+
+    cv2.imshow("Source", src)
+    cv2.imshow("Detected Lines (in red) - Standard Hough Line Transform", cdst)
+    cv2.imshow("Detected Lines (in red) - Probablilistic Hough Line Transform", cdtsP)
+
+    cv2.waitKey()
+    return 0
+
+lineDetect()
