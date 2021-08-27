@@ -5,6 +5,7 @@ from pathlib import Path
 import requests
 import time
 from requests.sessions import session
+from renameFilesInDirectory import renameFiles
 
 
 '''
@@ -91,8 +92,10 @@ def uploadImages(directory):
 
 # path = Path(r'C:\Users\xq127\Pictures\temp\Screenshot_20210820_003926.jpg')
 # url = uploadImage(path)
-directory = r'C:\Users\xq127\Pictures\temp'
+directory = r'C:\Users\xq127\Pictures\uploadImage'
 coordinate = (0, 500, 1070, 2050)
+
+renameFiles(directory)
 
 cropImagesInDirectory(directory, *coordinate)
 
