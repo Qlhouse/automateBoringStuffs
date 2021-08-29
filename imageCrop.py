@@ -99,5 +99,5 @@ renameFiles(directory)
 
 cropImagesInDirectory(directory, *coordinate)
 
-uploadImages(directory)
+# uploadImages(directory)
 # cropFileInTurn(r'C:\Users\xq127\Pictures\temp')

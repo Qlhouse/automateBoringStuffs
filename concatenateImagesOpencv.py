@@ -12,7 +12,6 @@ def cropImages(directory, boundaries):
         for baseName in filenames:
             file = Path(dirpath) / baseName
             img = cv2.imread(str(file))
-            cv2.imshow('Original', img)
 
             imgCroped = img[miny:maxy, minx:maxx]
 
@@ -70,4 +69,5 @@ def uploadImages(files):
 directory = r'C:\Users\xq127\Pictures\concatenateImages'
 boundaries = (500, 2040, 0, 1080)
 # cropImages(directory, boundaries)
+cropImages(directory, boundaries)
 concatenateImage(directory)
