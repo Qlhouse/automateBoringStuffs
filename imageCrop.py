@@ -93,7 +93,7 @@ def uploadImages(directory):
 # path = Path(r'C:\Users\xq127\Pictures\temp\Screenshot_20210820_003926.jpg')
 # url = uploadImage(path)
 directory = r'C:\Users\xq127\Pictures\uploadImage'
-coordinate = (0, 500, 1070, 2050)
+coordinate = (0, 745, 1070, 2140)
 
 renameFiles(directory)
 
