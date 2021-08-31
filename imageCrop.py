@@ -1,6 +1,5 @@
 from PIL import Image, ImageEnhance
 import os
-import json
 from pathlib import Path
 import requests
 import time
@@ -42,11 +41,17 @@ def cropImagesInDirectory(directory, left, top, right, bottom):
             # It will not change original image
             im1 = im.crop((left, top, right, bottom))
 
+            # Resize image
+            if im1.width > 800:
+                factor = 800 / im1.width
+
+            resizedImage = im1.resize((int(im1.width * factor), int(im1.height * factor)))
+
             # Sharp image
-            ehancer = ImageEnhance.Sharpness(im1)
+            ehancer = ImageEnhance.Sharpness(resizedImage)
             factor = 1.5
-            im1 = ehancer.enhance(factor)
-            im1.save(file, quality=95)
+            outputImage = ehancer.enhance(factor)
+            outputImage.save(file, quality=95)
 
             # cropImage(file)
 
