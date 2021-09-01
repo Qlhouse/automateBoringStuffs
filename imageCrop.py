@@ -42,8 +42,8 @@ def cropImagesInDirectory(directory, left, top, right, bottom):
             im1 = im.crop((left, top, right, bottom))
 
             # Resize image
-            if im1.width > 800:
-                factor = 800 / im1.width
+            if im1.height > 1200:
+                factor = 1200 / im1.height
 
             resizedImage = im1.resize((int(im1.width * factor), int(im1.height * factor)))
 
