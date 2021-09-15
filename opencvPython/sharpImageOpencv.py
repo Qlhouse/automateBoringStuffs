@@ -12,7 +12,7 @@ if image is None:
     sys.exit()
 
 #define sharpening kernel
-sharpeningKernel = np.array(([0, -1, 0],[-1, 6, -1],[0, -1, 0]), dtype="int")
+sharpeningKernel = np.array(([0, -1, 0],[-1, 5.5, -1],[0, -1, 0]), dtype="float")
 
 #filter2D is used to perform the convolution.
 # The third parameter (depth) is set to -1 which means the bit-depth of the output image is the 
