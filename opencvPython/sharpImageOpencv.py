@@ -4,12 +4,12 @@ import sys
 import numpy as np
 
 #read input image
-image = cv2.imread(r"C:\Users\xq127\Desktop\book.jpg")
+image = cv2.imread(r"C:\Users\xq127\Desktop\temp.jpg")
 
 #check is input image exists
 if image is None:
     print("can not find image")
-    sys.exit()
+    sys.exit
 
 #define sharpening kernel
 sharpeningKernel = np.array(([0, -1, 0],[-1, 5.5, -1],[0, -1, 0]), dtype="float")

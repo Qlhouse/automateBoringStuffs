@@ -10,16 +10,34 @@ import os
 
 filesDir = 'D:\\kivy'
 
-for file in os.listdir(filesDir):
-    if file.endswith('.mp4') or file.endswith('.webm'):
-        # print(file)
-        try:
-            order = re.search('#\d+', file)
-        except AttributeError:
-            order = 'Not found'
+def renameVedios():
+    for file in os.listdir(filesDir):
+        if file.endswith('.mp4') or file.endswith('.webm'):
+            # print(file)
+            try:
+                order = re.search('#\d+', file)
+            except AttributeError:
+                order = 'Not found'
         
-        if order != None:
-            newFileName = order.group() + '-' + file
-            src = filesDir + '\\' + file
-            dst = filesDir + '\\' + newFileName
-            os.rename(src, dst)
+            if order != None:
+                newFileName = order.group() + '-' + file
+                src = filesDir + '\\' + file
+                dst = filesDir + '\\' + newFileName
+                os.rename(src, dst)
+
+def renameSrt():
+    for file in os.listdir(filesDir):
+        if file.endswith('.srt'):
+            # print(file)
+            try:
+                order = re.search('#\d+', file)
+            except AttributeError:
+                order = 'Not found'
+        
+            if order != None:
+                newFileName = order.group() + '-' + file
+                src = filesDir + '\\' + file
+                dst = filesDir + '\\' + newFileName
+                os.rename(src, dst)
+
+renameSrt()
