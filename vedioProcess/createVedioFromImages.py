@@ -10,6 +10,7 @@ thumbnail_dir = os.path.join(SAMPLE_OUTPUTS, 'thumbnails')
 os.makedirs(thumbnail_dir, exist_ok=True)
 
 this_dir = os.listdir(thumbnail_dir)
+
 filepaths = [os.path.join(thumbnail_dir, fname) for 
     fname in this_dir if fname.endswith(".jpg")]
 
