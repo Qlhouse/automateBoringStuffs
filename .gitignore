@@ -2,4 +2,6 @@
 *.pyc
 *.mp4
 *.webm
-scratch.py
+scratch.*
+!/photosBank/*.mp4
+*.html
