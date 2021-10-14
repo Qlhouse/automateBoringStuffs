@@ -5,3 +5,4 @@
 scratch.*
 !/photosBank/*.mp4
 *.html
+*.csv
