@@ -4,7 +4,7 @@ import sys
 import numpy as np
 
 #read input image
-image = cv2.imread(r"C:\Users\xq127\Desktop\original.jpg")
+image = cv2.imread(r"C:\Users\xq127\Desktop\da604652c49aa8a6ea935c5df0af805.jpg")
 
 #check is input image exists
 if image is None:

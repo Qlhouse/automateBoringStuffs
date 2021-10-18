@@ -4,5 +4,5 @@
 *.webm
 scratch.*
 !/photosBank/*.mp4
-*.html
+web.html
 *.csv
