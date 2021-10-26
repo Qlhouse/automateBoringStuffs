@@ -1,0 +1,8 @@
+@startuml daysInMonth
+state c <<choice>>
+state return
+[*] --> c : [month==2]
+[*] --> c : [_is_leap(year)]
+c --> [*] : return
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml timedelta
+state days : days in month
+state seconds
+state microseconds
+
+days --> instance 
+
+
+@enduml

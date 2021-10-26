@@ -18,3 +18,11 @@ if CVZONE:
     cv2.imshow('Image', imgStacked)
     # cv2.imwrite(r'C:\Users\xq127\Desktop\output.jpg', imgOut)
     cv2.waitKey()
+
+# Step 1
+# Gaussian Blur
+import numpy as np
+import cv2
+
+image_vec = cv2.imread('image', 1)
+g_blurred = cv2.GaussianBlur(image_vec, (5, 5), 0)

@@ -1,0 +1,29 @@
+@startuml datetime
+skinparam MinClassWidth 200
+scale 1200 width
+scale 1024 height
+
+class timedelta{
+    --Constructor--
+    __new__()
+    --property method--
+    days()
+    seconds()
+    microseconds()
+
+    * --> __init__()
+    ==instance methods==
+    total_seconds()
+}
+
+class date{
+    --Constructor--
+    __new__()
+
+    --Operators--
+
+    --Methods--
+    timetuple()
+
+}
+@enduml

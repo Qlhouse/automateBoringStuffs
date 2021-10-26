@@ -1,0 +1,104 @@
+@startuml black-knight
+!theme plain
+package ElementDeclaration{
+abstract AbstractObject
+abstract class AlsoAbstractClass
+circle circle
+() AbbreviateCircle
+class Class
+diamond diamond-ValueIsPrimeNumber
+entity Entity
+enum Enum
+interface Interface
+}
+
+package ClassRelationship{
+class MyClass{
+    - int privateName
+    ..
+    # int protectName
+    ..Strings..
+    + String publicName
+    --
+    ~ packageProtectedMethodOne()
+    methodTWO()
+}
+
+class StaticAbstract{
+    {static} String id
+    {abstract} void methods()
+}
+
+class ExtensionClass
+
+class AggregationClass
+
+class CompositionClass
+
+MyClass <|-- ExtensionClass : Extension
+
+MyClass o-- AggregationClass : Aggregation
+
+MyClass *.. CompositionClass : Composition
+
+
+class 汽车
+发动机 - 汽车 : 驱动 >
+汽车 *- 轮子 : 拥有 4 <
+汽车 -- 人 : < 所属
+}
+
+package PackageStyle #DDDDDD{
+    scale 850 width
+    package foo1 <<Node>> {
+        class Class1
+    }
+
+    package foo2 <<Rectangle>> {
+        class Class2
+    }
+
+    package foo3 <<Folder>> {
+        class Class3
+    }
+
+    package foo4 <<Frame>> {
+        class Class4
+    }
+
+    package foo5 <<Cloud>> {
+        class Class5
+    }
+
+    package foo6 <<Database>> {
+        class Class6
+    }
+}
+
+package Layout {
+    together {
+        class class1
+        class class2
+    }
+
+    together {
+        class class3
+        class class4
+        class class5
+        class class6
+    }
+}
+
+package LinkObjects #D9EAC8 {
+    object London
+    object Washington
+    object Berlin
+    object NewYork
+
+    map CapitalCity {
+    USA => Washington
+    USA *--> London
+    Germany => Berlin
+    }
+}
+@enduml

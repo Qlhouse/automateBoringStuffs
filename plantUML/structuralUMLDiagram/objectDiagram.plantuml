@@ -1,0 +1,46 @@
+@startuml black-knight
+!theme plain
+package ElementDeclaration{
+abstract AbstractObject
+abstract class AlsoAbstractClass
+circle circle
+() AbbreviateCircle
+class Class
+diamond diamond-ValueIsPrimeNumber
+entity Entity
+enum Enum
+interface Interface
+}
+
+
+class MyClass{
+    - int privateName
+    ..
+    # int protectName
+    ..Strings..
+    + String publicName
+    --
+    ~ packageProtectedMethodOne()
+    methodTWO()
+}
+
+package ObjectRelationships{
+object firstObject 
+object MySecondObject {
+    name = 'John'
+    id = 324
+}
+object ThirdObject
+
+
+
+firstObject <|----MySecondObject : Extension
+firstObject *-- ThirdObject : Composition
+MySecondObject o-- ThirdObject : Aggregation
+
+
+firstObject : name = 'Dummy'
+firstObject : id = 123
+}
+
+@enduml
