@@ -1,5 +1,6 @@
 import  requests
 import  json
+from bs4 import BeautifulSoup
 from lxml.html import fromstring
 
 class YTstats:
@@ -8,16 +9,16 @@ class YTstats:
         self.channel_id = channel_id
         self.channel_statistics = None
 
-    @staticmethod
-    def get_proxies():
+    @classmethod
+    def get_proxies(cls):
         url = 'https://free-proxy-list.net/'
         response = requests.get(url)
-        parser = fromstring(response.text)
+        parser = fromstring(response.text, 'lxml')
         proxies = set()
         for i in parser.xpath('//tbody/tr')[:100]:
-            if i.xpath('.//td[7][contains(text(), "yes"]'):
+            if i.xpath('.//td[7]/text()')[0] == "yes":
                 # Grabbing IP and corresponding PORT
-                proxy = ":".join(i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0])
+                proxy = ":".join([i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0]])
                 proxies.add(proxy)
 
         return proxies
