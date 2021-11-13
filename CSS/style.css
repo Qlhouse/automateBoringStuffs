@@ -19,9 +19,8 @@ h1{
     width: 500px;
     height: 300px;
     font-size: 20px;
-    background: greenyellow;
-    margin-left: auto;
-    padding: 10px;
+    background: darkolivegreen;
+    margin-right: auto;
 }
 
 #box2{
@@ -32,6 +31,18 @@ h1{
     background: darkolivegreen;
     margin-right: auto;
     padding: 10px;
+}
+
+#box3{
+    /* border: 4px solid; */
+    margin: 80px;
+    width: 250px;
+    height: 250px;
+    font-size: 225px;
+    background: red;
+    text-align: center;
+
+    /* transform: translateX(50px); */
 }
 
 img{
