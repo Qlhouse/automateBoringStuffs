@@ -5,26 +5,47 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    margin: 20px;
 }
+
 h1{
     color:white;
     font-family:"Press Start 2p", "Consolas", sans-serif;
+    text-shadow: 5px -4px 3px gray;
 }
 
 #box1{
     border: 3px solid;
     width: 500px;
-    height: 400px;
+    height: 300px;
     font-size: 20px;
     background: greenyellow;
-    padding: 10px
+    margin-left: auto;
+    padding: 10px;
 }
 
 #box2{
     border: 3px solid;
     width: 500px;
-    height: 400px;
+    height: 300px;
     font-size: 20px;
     background: darkolivegreen;
-    padding: 10px
+    margin-right: auto;
+    padding: 10px;
+}
+
+img{
+    float: inline-start;
+}
+
+a:link{
+    color: lawngreen;
+}
+
+a:visited{
+    color:gray;
+}
+
+a:hover{
+    color:tomato;
 }
