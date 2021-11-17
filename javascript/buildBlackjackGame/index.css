@@ -14,14 +14,18 @@ h1 {
 
 #message-el {
     /* text-shadow: 2px 2px 4px blueviolet; */
-    font-size: 35px;
+    font-size: 30px;
     font-style: italic;
 }
 
-#start-el {
+#startButton-el, #newCard-el {
     color: #016f32;
     width: 200px;
     background: goldenrod;
     font-size: 30px;
     font-weight: bold;
+    padding: 5px;
+    border: none;
+    border-radius: 9px;
+    margin: 5px;
 }
