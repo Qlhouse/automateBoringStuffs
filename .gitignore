@@ -1,6 +1,5 @@
 *.pyc
 *.mp4
 *.webm
-scratch.*
 !/photosBank/*.mp4
 web.html
