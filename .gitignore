@@ -3,3 +3,4 @@
 *.webm
 !/photosBank/*.mp4
 web.html
+output.*
