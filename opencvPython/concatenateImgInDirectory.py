@@ -7,8 +7,13 @@ DIRECTORY = r'C:\Users\xq127\Downloads\pictures\concatenateImgVertically'
 
 # Scan imgs in DIRECTORY, order files by time
 os.chdir(DIRECTORY)
-imgs = os.listdir(DIRECTORY)
-imgs.sort(key=lambda x: os.path.getmtime(x))
+img_type = ('*.jpg', '*.png')
+img_grabbed = []
+for files in img_type:
+    img_grabbed.extend(glob.glob(files))
+
+# Sort imgs by timestamp
+img_grabbed.sort(key=os.path.getctime)
 
 # concatenate imgs
 def vconcat_resize_min(im_list, interpolation=cv2.INTER_CUBIC):
@@ -17,15 +22,12 @@ def vconcat_resize_min(im_list, interpolation=cv2.INTER_CUBIC):
                       for im in im_list]
     return cv2.vconcat(im_list_resize)
 
-file = imgs[1]
-print(os.path.abspath(file))
+img_list = [cv2.imread(os.path.abspath(img)) for img in sorted(img_grabbed, key=os.path.getctime)]
 
-img_list = [cv2.imread(os.path.abspath(img)) for img in imgs]
-
-# for img in img_list:
-#     cv2.imshow('image', img)
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()
+for img in img_list:
+    cv2.imshow('image', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 im_v_resize = vconcat_resize_min(img_list)
 # os.chdir(DIRECTORY)
