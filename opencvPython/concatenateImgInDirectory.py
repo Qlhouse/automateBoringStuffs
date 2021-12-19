@@ -24,10 +24,10 @@ def vconcat_resize_min(im_list, interpolation=cv2.INTER_CUBIC):
 
 img_list = [cv2.imread(os.path.abspath(img)) for img in sorted(img_grabbed, key=os.path.getctime)]
 
-for img in img_list:
-    cv2.imshow('image', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+# for img in img_list:
+#     cv2.imshow('image', img)
+#     cv2.waitKey(0)
+#     cv2.destroyAllWindows()
 
 im_v_resize = vconcat_resize_min(img_list)
 # os.chdir(DIRECTORY)
