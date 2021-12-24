@@ -1,0 +1,12 @@
+25-Dec-21 00:57:46 - Upload 27940541 failed
+Traceback (most recent call last):
+  File "D:\githubProject\automateBoringStuffs\opencvPython\uploadProductToWebsite\main.py", line 24, in <module>
+    uploadProduct(entry.path, certification)
+  File "D:\githubProject\automateBoringStuffs\opencvPython\uploadProductToWebsite\uploadProduct.py", line 121, in uploadProduct
+    uploadBriefImages(os.path.abspath(img))
+  File "D:\githubProject\automateBoringStuffs\opencvPython\uploadProductToWebsite\uploadProduct.py", line 99, in uploadBriefImages
+    WebDriverWait(driver, 20).until(
+  File "C:\Users\xq127\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+

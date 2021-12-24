@@ -838,3 +838,262 @@ console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resou
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1639901183493	geckodriver	INFO	Listening on 127.0.0.1:50425
+1639901186642	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileCH3vlG"
+1639901195673	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileCH3vlG\\search.json.mozlz4", (void 0)))
+1639901219548	Marionette	INFO	Listening on port 50438
+1639901220009	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639901284769	geckodriver	INFO	Listening on 127.0.0.1:60308
+1639901287850	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilekw5qmq"
+1639901289017	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilekw5qmq\\search.json.mozlz4", (void 0)))
+1639901296550	Marionette	INFO	Listening on port 60322
+1639901297592	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639902840862	geckodriver	INFO	Listening on 127.0.0.1:63309
+1639902843947	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileYpiM8y"
+1639902876501	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileYpiM8y\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1639902919346	Marionette	INFO	Listening on port 63318
+1639903163314	geckodriver	INFO	Listening on 127.0.0.1:64201
+1639903166382	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileFJIfqO"
+1639903167519	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileFJIfqO\\search.json.mozlz4", (void 0)))
+1639903172163	Marionette	INFO	Listening on port 64220
+1639903173213	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639922740581	geckodriver	INFO	Listening on 127.0.0.1:49937
+1639922743765	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofiledwqGYo"
+1639922754855	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofiledwqGYo\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1639922783877	Marionette	INFO	Listening on port 49949
+1639922784569	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1639924149833	geckodriver	INFO	Listening on 127.0.0.1:55726
+1639924153020	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilekzhztJ"
+1639924167393	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilekzhztJ\\search.json.mozlz4", (void 0)))
+1639924206977	Marionette	INFO	Listening on port 55735
+1639924207713	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639924434225	geckodriver	INFO	Listening on 127.0.0.1:56327
+1639924437312	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile6Jk4Qr"
+1639924447527	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile6Jk4Qr\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1639924491728	Marionette	INFO	Listening on port 56336
+1639924492531	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639924814247	geckodriver	INFO	Listening on 127.0.0.1:57298
+1639924817288	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilefwctYi"
+1639924819018	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilefwctYi\\search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/SearchService.jsm, line 204: Error: Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:204:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2142:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2274:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2178:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1355:52
+autoOpen@resource:///modules/UrlbarView.jsm:512:20
+_on_mousedown@resource:///modules/UrlbarInput.jsm:2940:21
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+
+JavaScript error: resource:///modules/UrlbarView.jsm, line 2178: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:204:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2142:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2274:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2178:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1355:52
+autoOpen@resource:///modules/UrlbarView.jsm:512:20
+_on_mousedown@resource:///modules/UrlbarInput.jsm:2940:21
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 204}]'[JavaScript Error: "Something tried to use the search service before it's been properly intialized. Please examine the stack trace to figure out what and where to fix it:
+_ensureInitialized@resource://gre/modules/SearchService.jsm:204:15
+_getEngineDefault@resource://gre/modules/SearchService.jsm:2142:10
+get defaultEngine@resource://gre/modules/SearchService.jsm:2274:17
+_cacheL10nStrings@resource:///modules/UrlbarView.jsm:2178:11
+onQueryStarted@resource:///modules/UrlbarView.jsm:583:10
+notify@resource:///modules/UrlbarController.jsm:652:25
+startQuery@resource:///modules/UrlbarController.jsm:133:10
+startQuery@resource:///modules/UrlbarInput.jsm:1355:52
+autoOpen@resource:///modules/UrlbarView.jsm:512:20
+_on_mousedown@resource:///modules/UrlbarInput.jsm:2940:21
+handleEvent@resource:///modules/UrlbarInput.jsm:425:23
+" {file: "resource://gre/modules/SearchService.jsm" line: 204}]' when calling method: [nsISearchService::defaultEngine]
+1639924825894	Marionette	INFO	Listening on port 57310
+1639924825959	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639925579397	geckodriver	INFO	Listening on 127.0.0.1:54825
+1639925582446	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileGBAGU8"
+1639925583491	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileGBAGU8\\search.json.mozlz4", (void 0)))
+1639925591669	Marionette	INFO	Listening on port 54837
+1639925592362	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639929051676	geckodriver	INFO	Listening on 127.0.0.1:50542
+1639929054734	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileaxpI72"
+1639929068275	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileaxpI72\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1639929101030	Marionette	INFO	Listening on port 50555
+1639929102330	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639929853219	geckodriver	INFO	Listening on 127.0.0.1:51981
+1639929856281	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilee78HhD"
+1639929857820	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilee78HhD\\search.json.mozlz4", (void 0)))
+1639929862172	Marionette	INFO	Listening on port 51991
+1639929862233	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639929956054	geckodriver	INFO	Listening on 127.0.0.1:52170
+1639929959098	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile5UpRHT"
+1639929959990	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile5UpRHT\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1639929968088	Marionette	INFO	Listening on port 52183
+1639929968747	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639934811809	geckodriver	INFO	Listening on 127.0.0.1:58378
+1639934815035	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile7pOPfD"
+1639934828659	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile7pOPfD\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1639934864391	Marionette	INFO	Listening on port 58392
+1639934867530	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639934887274	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1639935229894	geckodriver	INFO	Listening on 127.0.0.1:63714
+1639935232968	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileC9jnzA"
+1639935235462	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileC9jnzA\\search.json.mozlz4", (void 0)))
+1639935241625	Marionette	INFO	Listening on port 63726
+1639935241713	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1639935343749	geckodriver	INFO	Listening on 127.0.0.1:63970
+1639935346813	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilerqMm91"
+1639935349458	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilerqMm91\\search.json.mozlz4", (void 0)))
+1639935359189	Marionette	INFO	Listening on port 63983
+1639935360033	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://taoge.slhsb.club/web/index.php?c=user&a=login&, line 140: ReferenceError: cookie is not defined
+1640193900829	geckodriver	INFO	Listening on 127.0.0.1:63922
+1640193904062	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileF7XlA3"
+1640193905581	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileF7XlA3\\search.json.mozlz4", (void 0)))
+1640193915702	Marionette	INFO	Listening on port 63933
+1640193916506	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1640194307817	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1640194604845	Marionette	INFO	Stopped listening on port 63933
+[Parent 11168, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 11168, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 11168, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640194664696	geckodriver	INFO	Listening on 127.0.0.1:64809
+1640194667714	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile9ARcoz"
+1640194670354	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile9ARcoz\\search.json.mozlz4", (void 0)))
+1640194677620	Marionette	INFO	Listening on port 64825
+1640194678744	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640195200426	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: timeout
+console.error: services.settings: 
+  Message: TypeError: NetworkError: Network request failed
+  Stack:
+    fetch/</request.onerror@resource://services-settings/Utils.jsm:131:26
+
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1640334295624	Marionette	INFO	Stopped listening on port 64825
+[Parent 14260, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+or: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError: Network request failed
+1640195898614	addons.xpi	ERROR	Failed to download system add-on webcompat@mozilla.org: Error: Failed downloading via XHR, status: 0, reason: error(resource://gre/modules/addons/ProductAddonChecker.jsm:419:16) JS Stack trace: fail@ProductAddonChecker.jsm:419:16
+1640195898615	addons.xpi	ERROR	Failed to download system add-on reset-search-defaults@mozilla.com: Error: Failed downloading via XHR, status: 0, reason: error(resource://gre/modules/addons/ProductAddonChecker.jsm:419:16) JS Stack trace: fail@ProductAddonChecker.jsm:419:16
+1640195913937	Marionette	INFO	Stopped listening on port 64420
+[Parent 8652, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.error: services.settings: 
+  main/normandy-recipes-capabilities Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  Message: TypeError: NetworkError: Network request failed
+  Stack:
+    fetch/</request.onerror@resource://services-settings/Utils.jsm:131:26
+
+[Parent 8652, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640268840137	geckodriver	INFO	Listening on 127.0.0.1:65529
+1640268843282	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileZu0TTf"
+1640268846223	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileZu0TTf\\search.json.mozlz4", (void 0)))
+1640268858430	Marionette	INFO	Listening on port 49160
+1640268859251	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640268889533	Marionette	INFO	Stopped listening on port 49160
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x140007,name=PBackgroundLSDatabase::Msg_RequestAllowToClose) Channel error: cannot send/recv
+
+[Parent 13984, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1640308074749	geckodriver	INFO	Listening on 127.0.0.1:65113
+1640308077798	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilezvBDt7"
+1640308080803	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofilezvBDt7\\search.json.mozlz4", (void 0)))
+1640308089472	Marionette	INFO	Listening on port 65124
+1640308089865	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640308111277	Marionette	INFO	Stopped listening on port 65124
+[Parent 16372, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1640308341498	geckodriver	INFO	Listening on 127.0.0.1:49250
+1640308344603	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile4LkeHC"
+1640308345374	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofile4LkeHC\\search.json.mozlz4", (void 0)))
+1640308349568	Marionette	INFO	Listening on port 49263
+1640308350028	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640308371166	Marionette	INFO	Stopped listening on port 49263
+1640308956454	geckodriver	INFO	Listening on 127.0.0.1:58598
+1640308959637	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileUT84y9"
+1640308960811	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\xq127\\AppData\\Local\\Temp\\rust_mozprofileUT84y9\\search.json.mozlz4", (void 0)))
+1640308965175	Marionette	INFO	Listening on port 58609
+1640308965583	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1640308981856	Marionette	INFO	Stopped listening on port 58609
+[Parent 9468, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
