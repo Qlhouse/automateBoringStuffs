@@ -26,6 +26,7 @@ for entry in os.scandir(productData):
             # print(entry.path)
             uploadProduct(entry.path, certification)
             shutil.move(entry.path, productBackupDir)
+            shutil.rmtree(entry.path)
     except Exception as e:
         logging.exception(f"Upload {os.path.basename(entry.path)} failed")
     # finally:
