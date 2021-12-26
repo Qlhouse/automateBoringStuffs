@@ -6,3 +6,4 @@ web.html
 output.*
 certification.*
 *.log
+failure.txt

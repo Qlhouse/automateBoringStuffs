@@ -12,13 +12,16 @@ from selenium import webdriver
 
 parser = argparse.ArgumentParser(description="Product URL and xpath selector")
 parser.add_argument("url", type=str, help="URL link to product")
-# parser.add_argument(
-#     "xpath_selector", type=str, help="xpath selector for product detail"
-# )
+parser.add_argument("fold", type=str, help="Product ID directory")
 args = parser.parse_args()
 
 url = args.url
-# xpath_selector = args.xpath_selector
+fold = args.fold
+
+imgStoredRootDir = r"D:\bookStore\productData"
+outFileName = os.path.join(
+    imgStoredRootDir, fold, "detailImageDir", "concatenatedDetail.jpg"
+)
 
 # Scrape the product url, return a queue contains image urls
 def getProductDetailImageUrls(url):
@@ -105,7 +108,8 @@ def vconcat_resize_min(im_list, interpolation=cv2.INTER_CUBIC):
 imgList = downloadImageAndStoredInList(imgUrlQueue)
 
 im_v_resize = vconcat_resize_min(imgList)
-cv2.imwrite("opencv_vconcat_resize.jpg", im_v_resize)
+# print(outFileName)
+cv2.imwrite(outFileName, im_v_resize)
 
 print("Done...")
 

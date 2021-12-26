@@ -7,7 +7,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
 
-
 driverPath = r"C:\Users\xq127\AppData\Local\seleniumDriver\geckodriver.exe"
 driver = webdriver.Firefox(executable_path=driverPath)
 

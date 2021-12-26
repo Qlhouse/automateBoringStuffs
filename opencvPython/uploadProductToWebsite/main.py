@@ -3,6 +3,9 @@ import json
 from uploadProduct import uploadProduct  # , driver
 from datetime import datetime
 import logging
+import shutil
+
+productBackupDir = r"D:\bookStore\productDataBackup"
 
 logging.basicConfig(
     filename="failure.txt",
@@ -22,6 +25,7 @@ for entry in os.scandir(productData):
         if entry.is_dir():
             # print(entry.path)
             uploadProduct(entry.path, certification)
+            shutil.move(entry.path, productBackupDir)
     except Exception as e:
         logging.exception(f"Upload {os.path.basename(entry.path)} failed")
     # finally:
