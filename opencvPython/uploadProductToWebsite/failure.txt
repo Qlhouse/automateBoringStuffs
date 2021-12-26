@@ -1,0 +1,22 @@
+27-Dec-21 00:26:55 - Upload 28527650 failed
+Traceback (most recent call last):
+  File "C:\Users\xq127\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 806, in move
+    os.rename(src, real_dst)
+PermissionError: [WinError 5] 拒绝访问。: 'D:\\bookStore\\productData\\28527650' -> 'D:\\bookStore\\productDataBackup\\28527650'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\githubProject\automateBoringStuffs\opencvPython\uploadProductToWebsite\main.py", line 27, in <module>
+    shutil.move(entry.path, productBackupDir)
+  File "C:\Users\xq127\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 824, in move
+    rmtree(src)
+  File "C:\Users\xq127\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 740, in rmtree
+    return _rmtree_unsafe(path, onerror)
+  File "C:\Users\xq127\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 613, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Users\xq127\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 622, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\xq127\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 620, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\bookStore\\productData\\28527650\\detailImageDir'

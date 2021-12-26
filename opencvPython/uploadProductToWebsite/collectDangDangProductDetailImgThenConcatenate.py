@@ -70,7 +70,11 @@ def getProductDetailImageUrls(url):
         # Parse product detail image address
         # 获取内容简介节点
         productDetailTag = driver.find_element_by_xpath('//*[@id="description"]/div[2]')
-        # productDetailTag = driver.find_element_by_xpath_selector(f'{xpath_selector}')
+        try:
+            productDetailTag.find_element_by_tag("src")
+        except:
+            productDetailTag = driver.find_element_by_xpath('//*[@id="content"]/div[2]')
+        # //*[@id="content"]/div[2]
         soup = BeautifulSoup(productDetailTag.get_attribute("innerHTML"), "html.parser")
         imgTag = soup.find("img")
         imgUrlQueue.put(imgTag["src"])

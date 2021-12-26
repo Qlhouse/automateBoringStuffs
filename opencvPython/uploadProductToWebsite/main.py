@@ -23,9 +23,9 @@ productData = r"D:\bookStore\productData"
 for entry in os.scandir(productData):
     try:
         if entry.is_dir():
-            # print(entry.path)
             uploadProduct(entry.path, certification)
             shutil.move(entry.path, productBackupDir)
+            # print(entry.path)
             shutil.rmtree(entry.path)
     except Exception as e:
         logging.exception(f"Upload {os.path.basename(entry.path)} failed")
