@@ -9,6 +9,7 @@ import queue
 from bs4 import BeautifulSoup
 import argparse
 from selenium import webdriver
+import shutil
 
 parser = argparse.ArgumentParser(description="Product URL and xpath selector")
 parser.add_argument("url", type=str, help="URL link to product")
@@ -22,6 +23,18 @@ imgStoredRootDir = r"D:\bookStore\productData"
 outFileName = os.path.join(
     imgStoredRootDir, fold, "detailImageDir", "concatenatedDetail.jpg"
 )
+
+# Remove original image in "detailImageDir"
+detailImageDir = os.path.join(imgStoredRootDir, fold, "detailImageDir")
+for filename in os.listdir(detailImageDir):
+    file_path = os.path.join(detailImageDir, filename)
+    try:
+        if os.path.isfile(file_path) or os.path.islink(file_path):
+            os.unlink(file_path)
+        elif os.path.isdir(file_path):
+            shutil.rmtree(file_path)
+    except Exception as e:
+        print("Failed to delete %s. Reason: %s" % (file_path, e))
 
 # Scrape the product url, return a queue contains image urls
 def getProductDetailImageUrls(url):
