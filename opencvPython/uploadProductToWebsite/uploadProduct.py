@@ -6,12 +6,32 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
+options = Options()
+options.headless = True
 
 driverPath = r"C:\Users\xq127\AppData\Local\seleniumDriver\geckodriver.exe"
+# driverPath = r"C:\Users\xq127\AppData\Local\seleniumDriver\chromedriver.exe"
+# driver = webdriver.Firefox(executable_path=driverPath, options=options)
 driver = webdriver.Firefox(executable_path=driverPath)
 
+# driver = webdriver.Firefox()
 
-def uploadProduct(rootDir, certification):
+
+def loginWeb(certification):
+    # Login to website
+    driver.get(certification["targetWebsite"])
+    usernameElement = driver.find_element_by_name("username")
+    passwordElement = driver.find_element_by_name("password")
+    usernameElement.send_keys(certification["username"])
+    passwordElement.send_keys(certification["password"])
+
+    driver.find_element_by_name("submit").click()
+    time.sleep(5)
+
+
+def uploadProduct(rootDir):
     # rootDir = os.path.dirname(os.path.realpath(__file__))
     # print(rootDir)
 
@@ -24,16 +44,6 @@ def uploadProduct(rootDir, certification):
     # certificateFile = rootDir + "\\certification.json"
     # with open(certificateFile, "r", encoding="utf-8") as userInfo:
     #     certification = json.load(userInfo)
-
-    # Login to website
-    driver.get(certification["targetWebsite"])
-    usernameElement = driver.find_element_by_name("username")
-    passwordElement = driver.find_element_by_name("password")
-    usernameElement.send_keys(certification["username"])
-    passwordElement.send_keys(certification["password"])
-
-    driver.find_element_by_name("submit").click()
-    time.sleep(5)
 
     # 跳转到商品页
     linkToProductPage = driver.find_element_by_partial_link_text("商品")
@@ -259,7 +269,7 @@ def uploadProduct(rootDir, certification):
 
     print(f"上传商品 {os.path.basename(rootDir)} 成功...")
 
-    driver.close()
+    # driver.close()
 
 
 if __name__ == "__main__":
