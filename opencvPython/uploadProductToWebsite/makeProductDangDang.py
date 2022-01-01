@@ -190,7 +190,7 @@ BriefImgs.place(relx=0.5, rely=0.4, anchor="center")
 # DetialImgs = tk.Button(
 #     text="移动详情图", font=buttomFontStyle, fg="#000fff", command=moveDetialImgs
 # )
-downloadConcatenateImgs
+
 DetialImgs = tk.Button(
     text="移动详情图", font=buttomFontStyle, fg="#000fff", command=downloadConcatenateImgs
 )
