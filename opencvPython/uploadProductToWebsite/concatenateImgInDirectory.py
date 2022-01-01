@@ -50,7 +50,30 @@ img_list = [
 #     cv2.waitKey(0)
 #     cv2.destroyAllWindows()
 
+# Remove destination path
+for filename in os.listdir(destinationPath):
+    file_path = os.path.join(destinationPath, filename)
+    try:
+        if os.path.isfile(file_path) or os.path.islink(file_path):
+            os.remove(file_path)
+        elif os.path.isdir(file_path):
+            shutil.rmtree(file_path)
+    except Exception as e:
+        print("Failed to delete %s. Reason: %s" % (file_path, e))
+
+
 im_v_resize = vconcat_resize_min(img_list)
 # os.chdir(DIRECTORY)
 outputImg = os.path.join(destinationPath, "detailImage.jpg")
 cv2.imwrite(outputImg, im_v_resize)
+
+# Remove original image in original path
+for filename in os.listdir(originalPath):
+    file_path = os.path.join(originalPath, filename)
+    try:
+        if os.path.isfile(file_path) or os.path.islink(file_path):
+            os.remove(file_path)
+        elif os.path.isdir(file_path):
+            shutil.rmtree(file_path)
+    except Exception as e:
+        print("Failed to delete %s. Reason: %s" % (file_path, e))
