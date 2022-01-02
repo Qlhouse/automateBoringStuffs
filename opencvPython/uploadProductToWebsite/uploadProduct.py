@@ -85,6 +85,9 @@ def uploadProduct(rootDir):
     selectedClassification = data["商品分类"]
     classifyOptions = driver.find_element_by_xpath(
         f"//div[text()='{selectedClassification}']"
+        # f"//*[@id='select2-result-label-41']/text()='{selectedClassification}']"
+        # //*[@id="select2-result-label-121"]
+        # //*[@id="select2-result-label-121"]/text()
     )
     classifyOptions.click()
     time.sleep(5)

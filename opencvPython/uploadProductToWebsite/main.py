@@ -4,10 +4,10 @@ from uploadProduct import uploadProduct, loginWeb, driver
 from datetime import datetime
 import logging
 import shutil
+import time
 
 productBackupDir = r"D:\bookStore\productDataBackup"
 productData = r"D:\bookStore\productData"
-dirList = []
 
 logging.basicConfig(
     filename="failure.txt",
@@ -27,15 +27,19 @@ for entry in os.scandir(productData):
     try:
         if entry.is_dir():
             uploadProduct(entry.path)
-            dirList.append(entry.path)
-
+            logging.info(f"Upload {os.path.basename(entry.path)} successed")
+            time.sleep(5)
     except Exception as e:
         logging.exception(f"Upload {os.path.basename(entry.path)} failed")
-    finally:
-        driver.close()
+        linkToProductPage = driver.find_element_by_partial_link_text("商品")
+        linkToProductPage.click()
+        time.sleep(7)
+    # finally:
+    #     #     driver.close()
+    #     for dirpath in dirList:
+    #         try:
+    #             shutil.move(entry.path, productBackupDir)
+    #         except Exception as e:
+    #             logging.exception(f"Move {os.path.basename(entry.path)} failed")
 
-for dirpath in dirList:
-    try:
-        shutil.move(entry.path, productBackupDir)
-    except Exception as e:
-        logging.exception(f"Move {os.path.basename(entry.path)} failed")
+driver.close()
