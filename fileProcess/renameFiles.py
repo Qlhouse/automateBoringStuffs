@@ -41,3 +41,21 @@ def renameSrt():
                 os.rename(src, dst)
 
 renameSrt()
+
+def rename(dir):
+    for item in os.listdir(dir):
+        entry = os.path.join(dir, item)
+        if os.path.isfile(entry):
+            if item.endswith(".srt"):
+                newBasename = item.replace('-en_US', '')
+                newEntry = os.path.join(dir, newBasename)
+                shutil.move(entry, newEntry)
+
+        if os.path.isdir(item):
+            rename(os.path.abspath(item))
+
+
+dir = r'C:\迅雷下载\[FreeCourseSite.com] Udemy - Mastering 4 critical SKILLS using Python'
+os.chdir(dir)
+rename(dir)
+
